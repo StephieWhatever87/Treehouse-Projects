@@ -68,9 +68,23 @@ def start_game():
     else:
         print(f"Yeahy, you got it!\U0001F973\nIt took you {number_of_guesses} attempts to guess the right number.")
     #   5. Let the player know the game is ending, or something that indicates the game is over.
-    print("The game is over. Goodbye.\nHope to see you soon!\U0001F63A")
+    print("The game is over.")
     # ( You can add more features/enhancements if you'd like to. )
-
+    
+    return number_of_guesses
 
 # Kick off the program by calling the start_game function.
+#start_game()
+
 start_game()
+
+while True:
+    play_again=input("Would you like to play again? If so, please type ""y"".\nIf you dont want to play again, type ""n"".").lower()
+    if play_again == "y":
+        start_game()
+    elif play_again== "n":
+        print("Goodbye.\nHope to see you soon!\U0001F63A")
+        break
+    else: 
+        print("Thats not a valid input.")     
+   
