@@ -3,7 +3,6 @@ Python Development Techdegree
 Project 1 - The Number Guessing Game
 --------------------------------
 """
-
 # Import the random module.
 import random
 
@@ -86,9 +85,9 @@ current_high_score = number_of_guesses
 # ask the user whether he wants to play again after the first round, if so start again, if not, end game.
 while True:
     play_again = input(
-        "Would you like to play again? If so, please type ""y"".\nIf you dont want to play again, type ""n"".").lower()
+        "Would you like to play again? If so, please type 'y'.\nIf you dont want to play again, type 'n':   ").lower()
     if play_again == "y":
-        # display the current high score to the user
+        # determine & display the current high score to the user
         print(
             f"The current high score is {current_high_score}. Let's see if you can beat it! Good luck.")
         number_of_guesses = start_game()
@@ -96,9 +95,10 @@ while True:
             current_high_score = number_of_guesses
         else:
             current_high_score = current_high_score
-
+    # message if user doesn't want to play again
     elif play_again == "n":
         print("Goodbye.\nHope to see you soon!\U0001F63A")
         break
+    # message if input is neither n nor y
     else:
         print("Thats not a valid input.")
