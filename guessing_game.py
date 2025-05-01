@@ -11,10 +11,12 @@ import random
 def start_game():
 
 #   1. Display an intro/welcome message to the player.
+
+    print("Hello and welcome to the number guessing game.\U0001F916 Let's start and have some fun!")
     while True:
         
         try:
-            number_guess=int(input("Welcome to the number guessing game.\U0001F916 Let's start and have some fun!\nPlease chose a number between 1 and 10:  "))
+            number_guess=int(input("Please chose a number between 1 and 10:  "))
         #if value cant be turned into an integer throw error.
         except:
             print("Thats not an integer, please try again.")
@@ -66,7 +68,7 @@ def start_game():
     else:
         print(f"Yeahy, you got it!\U0001F973\nIt took you {number_of_guesses} attempts to guess the right number.")
     #   5. Let the player know the game is ending, or something that indicates the game is over.
-    print("The game is over. Goodbye. Hope to see you soon!\U0001F63A")
+    print("The game is over. Goodbye.\nHope to see you soon!\U0001F63A")
     # ( You can add more features/enhancements if you'd like to. )
 
 
